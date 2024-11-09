@@ -1,0 +1,27 @@
+.video-container{
+
+    size:10000px;
+  }
+
+  /* Container pour la vidéo */
+.video-container {
+  position: relative;
+  display: inline-block; /* Vous pouvez ajuster selon le besoin */
+}
+
+/* La jauge sera positionnée absolument dans le container de la vidéo */
+.overlay-jauge {
+  position: absolute;
+  top: 50%;   /* Ajustez cette valeur pour la position verticale */
+  left: 50%;  /* Ajustez cette valeur pour la position horizontale */
+  transform: translate(-50%, -50%); /* Pour centrer l'élément */
+  z-index: 10; /* S'assurer que la jauge est au-dessus de la vidéo */
+}
+
+/* Vous pouvez aussi ajuster le z-index de la vidéo si nécessaire */
+video {
+  z-index: 1; /* La vidéo reste derrière la jauge */
+}
+
+
+  

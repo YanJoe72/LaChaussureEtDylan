@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="video-container">
+    <video #videoPlayer autoplay muted>
+      <source src="assets/images/ton_pere.mov" type="video/mp4">
+      Votre navigateur ne prend pas en charge la vidéo HTML5.
+    </video>
+  </div>
+
+  <div class="arc-container" (click)="toggleGauge()">
+    <div class="fixed-point"></div>
+    <div class="line" #line [ngClass]="{'paused': isPaused}"></div>
+    <div class="moving-point" [ngClass]="{'paused': isPaused}"></div>
+  </div>
+
+  <div *ngIf="showGauge" class="gauge" (click)="stopGauge()">
+    <div class="gauge-bar" [style.width]="gaugeValue + '%'"></div>
+  </div>
+
+  <div class="circle" #circle></div>
+
+  
+  <!-- Image qui suit la ligne -->
+  <img 
+    src="assets/images/chaussure.png" 
+    class="moving-image" 
+    [style.left.px]="imagePosition.x" 
+    [style.top.px]="imagePosition.y"
+  />

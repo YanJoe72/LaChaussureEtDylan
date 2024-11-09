@@ -1,0 +1,9 @@
+.background {
+    background-image: url('/assets/images/loose.png');
+    background-size:1700px;
+    background-repeat: no-repeat;
+    height: 100vh; /* S'assure que l'image couvre toute la hauteur */
+    display: block;
+    margin-left: 5%;
+    margin-right: auto;
+  }

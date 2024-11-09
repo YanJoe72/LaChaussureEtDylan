@@ -1,0 +1,6 @@
+<div class="arc-container" (click)="toggleAnimation()">
+    <div class="fixed-point"></div>
+    <div class="line" [ngClass]="{'paused': isPaused}"></div>
+    <div class="moving-point" [ngClass]="{'paused': isPaused}"></div>
+  </div>
+  
